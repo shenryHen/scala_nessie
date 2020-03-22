@@ -1,3 +1,2 @@
 target/
-nessie/target/
-nessie/project/
+template_build.sbt
