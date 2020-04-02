@@ -1,2 +1,4 @@
 target/
 template_build.sbt
+scala_nessie.sublime-project
+scala_nessie.sublime-workspace
