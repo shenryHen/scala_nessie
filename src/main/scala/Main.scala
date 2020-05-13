@@ -1,15 +1,16 @@
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.model._
-import akka.stream.ActorMaterializer
 import akka.http.scaladsl.model.HttpRequest
 import akka.http.scaladsl.unmarshalling.Unmarshal
+import akka.stream.ActorMaterializer
+
 import play.api.libs.json._
 
 import scala.concurrent._
-import scala.util.{ Failure, Success }
 import scala.concurrent.duration._
 import scala.language.postfixOps
+import scala.util.{ Failure, Success }
 
 object Main extends App {
   val KEY: String = sys.env.getOrElse("NESSIE_API_KEY", "")
@@ -208,4 +209,5 @@ object Main extends App {
       case Failure(e) => println(e)
     }
   Thread.sleep(2000)
+  sys.exit(0)
 }
