@@ -10,7 +10,7 @@ lazy val root = (project in file("."))
     name := "scala_nessie",
   	trapExit := false,
     libraryDependencies += "com.typesafe.akka" %% "akka-http"   % "10.1.11",
-  	libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.5.26",
+  	libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.6.5",
   	libraryDependencies += "com.typesafe.play" %% "play-json" % "2.8.1"
   )
 
@@ -42,6 +42,7 @@ ThisBuild / scmInfo := Some(
 // }
 // ThisBuild / publishMavenStyle := true
 assemblyMergeStrategy in assembly := {
- case PathList("META-INF", xs @ _*) => MergeStrategy.discard
- case x => MergeStrategy.first
+  case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+  case PathList("reference.conf") => MergeStrategy.concat
+  case x => MergeStrategy.first
 }

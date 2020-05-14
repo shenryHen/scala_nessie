@@ -61,6 +61,7 @@ object Main {
           println("Page 2, first ATM data:", atmArr2.head)
         }
       }
+      
     // POST, create customer
     var newCustID: String = null 
     val custPostReq = HttpRequest(
