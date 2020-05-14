@@ -7,7 +7,7 @@
 3. Clone this repo
 4. In the project's root directory, run this:
   1. `sbt clean`. This removes any pre-built jars accidentally included in this repo, or created from previous runs.
-  2. `sbt assembly. This will build one jar that you can run by itself, with all dependencies included.
+  2. `sbt assembly`. This will build one jar that you can run by itself, with all dependencies included.
 5. Run the jar with `scala .\target\scala-2.12\scala_nessie-assembly-1.0.0.jar`. This file path to the jar will generally be the same, 
 but the jar name might change for different versions of this project.
 
